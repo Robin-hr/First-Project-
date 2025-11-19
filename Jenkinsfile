@@ -2,11 +2,12 @@ pipeline {
     agent any
     stages {
         stage('Clone Code') {
-            steps {
-                // Replace with your GitHub repository URL
-                git branch: 'main', url: 'https://github.com/Robin-hr/First-Project-.git(https://github.com/Robin-hr/First-Project-.git)'
+    steps {
+        git branch: 'main',
+            url: 'https://github.com/Robin-hr/First-Project-.git'
             }
         }
+
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t flask-app:latest .'
